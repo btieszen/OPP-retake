@@ -17,10 +17,10 @@
 
 
 
-import budget
-import category_display
-import update_expense
-import expense
+import budget1
+import category_display1
+import update_expense1
+import expense1
 category_budget =[{'Food':500,'Entertainment':200,'Bills':2000}]
 class BudgetCategory:
  
@@ -35,13 +35,13 @@ class BudgetCategory:
 
 
 def monthly_budget(category_budget):
-    budget.month_budget(category_budget)
+    budget1.month_budget(category_budget)
        
 def add_expense(category_budget):
-    expense.new_expense(category_budget)
+    expense1.new_expense(category_budget)
     
 def display_category_summary(category_budget):
-    category_display.display_category_summary(category_budget)
+    category_display1.display_category_summary(category_budget)
        
        
 def main():
@@ -68,7 +68,7 @@ def main():
                 add_expense(category_budget)
                 
             elif category_name =="4":
-                update_expense.update(category_budget)
+                update_expense1.update(category_budget)
                         
         except Exception as e:
             print(f"Please enter a number between 1-5: {e}")
