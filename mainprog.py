@@ -32,17 +32,14 @@ class BudgetCategory:
     def set_budget(self,x):
         self._budget = x 
     
-
-
-def monthly_budget(category_budget):
-    budgets.month_budget(category_budget)
+    def monthly_budget(category_budget):
+        budgets.month_budget(category_budget)
        
-def add_expense(category_budget):
-    expenses.new_expense(category_budget)
+    def add_expense(category_budget):
+        expenses.new_expense(category_budget)
     
-def display_category_summary(category_budget):
-    category_display2.display_category_summary(category_budget)
-       
+    def display_category_summary(category_budget):
+        category_display2.display_category_summary(category_budget)
        
 def main():
     category_budget ={'Food':500,'Entertainment':200,'Bills':2000}
@@ -59,13 +56,13 @@ def main():
             break
         try:
             if category_name =="1":
-                monthly_budget(category_budget)
+                budgets.month_budget(category_budget)
                     
             elif category_name =="2":
-                display_category_summary(category_budget)
+                category_display2.display_category_summary(category_budget)
                   
             elif category_name =="3":
-                add_expense(category_budget)
+                expenses.new_expense(category_budget)
                 
             elif category_name =="4":
                 update_expenses.update(category_budget)
